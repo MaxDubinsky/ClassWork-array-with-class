@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+class Student {
+public:
+	string name;
+	int age;
+};
+
+	Student newList[3]{ {"Vlad", 18},
+                      {"Maxim", 16},
+                      {"Oleg", 26}};
+
+  Student oldestStudent() {
+    for (int i = 0; i < 3; i++) {
+		  if (newList[0].age < newList[i].age) {
+			 newList[0].age = newList[i].age;
+      }
+    }
+    cout << newList[0].age << "\n";
+  }
+    
+
+int main() {
+  oldestStudent();
+}
